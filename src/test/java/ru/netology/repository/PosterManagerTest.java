@@ -1,10 +1,10 @@
 package ru.netology.repository;
 
-import org.junit.Test;
+
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import ru.netology.data.FilmData;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 public class PosterManagerTest {
 
