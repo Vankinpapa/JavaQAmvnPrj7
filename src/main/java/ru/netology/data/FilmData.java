@@ -4,7 +4,7 @@ public class FilmData {
     private String nameFilm;
     private int idFilm;
 
-    public FilmData() {
+    private FilmData() {
     }
 
     public FilmData(String nameFilm, int idFilm) {
@@ -12,19 +12,19 @@ public class FilmData {
         this.idFilm = idFilm;
     }
 
-    public String getNameFilm() {
+    private String getNameFilm() {
         return nameFilm;
     }
 
-    public void setNameFilm(String nameFilm) {
+    private void setNameFilm(String nameFilm) {
         this.nameFilm = nameFilm;
     }
 
-    public int getIdFilm() {
+    private int getIdFilm() {
         return idFilm;
     }
 
-    public void setIdFilm(int idFilm) {
+    private void setIdFilm(int idFilm) {
         this.idFilm = idFilm;
     }
 }

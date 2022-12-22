@@ -30,7 +30,7 @@ public class PosterManagerTest {
         poster.addFilm(film3);
 
         FilmData[] expected = {film1, film2, film3,};
-        FilmData[] actual = poster.findAllFilm();
+        FilmData[] actual = poster.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -54,7 +54,22 @@ public class PosterManagerTest {
 
 
         FilmData[] expected = {film1, film2, film3, film4, film5, film6, film7, film8, film9, film10};
-        FilmData[] actual = poster.findAllFilm();
+        FilmData[] actual = poster.findAll();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+
+    public void testLastWithMinFilm() {
+        PosterManager poster = new PosterManager(5);
+
+        poster.addFilm(film11);
+        poster.addFilm(film12);
+
+
+        FilmData[] expected = {film12, film11};
+        FilmData[] actual = poster.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -63,6 +78,25 @@ public class PosterManagerTest {
 
     public void testLastFilm() {
         PosterManager poster = new PosterManager(5);
+
+        poster.addFilm(film8);
+        poster.addFilm(film9);
+        poster.addFilm(film10);
+        poster.addFilm(film11);
+        poster.addFilm(film12);
+
+
+        FilmData[] expected = {film12, film11, film10, film9, film8};
+        FilmData[] actual = poster.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+
+    public void testLastWithMaxFilm() {
+        PosterManager poster = new PosterManager(5);
+
         poster.addFilm(film1);
         poster.addFilm(film2);
         poster.addFilm(film3);
@@ -78,7 +112,7 @@ public class PosterManagerTest {
 
 
         FilmData[] expected = {film12, film11, film10, film9, film8};
-        FilmData[] actual = poster.findLastFiveFilm();
+        FilmData[] actual = poster.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }

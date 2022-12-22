@@ -4,7 +4,7 @@ import ru.netology.data.FilmData;
 
 public class PosterManager {
 
-    public FilmData[] films = new FilmData[0];
+    private FilmData[] films = new FilmData[0];
     private int limit;
 
     public PosterManager() {
@@ -24,7 +24,7 @@ public class PosterManager {
         films = tmp;
     }
 
-    public FilmData[] findAllFilm() {
+    public FilmData[] findAll() {
         if (films.length > limit) {
             FilmData[] tmp = new FilmData[limit];
             for (int i = 0; i < tmp.length; i++) {
@@ -37,7 +37,7 @@ public class PosterManager {
     }
 
 
-    public FilmData[] findLastFiveFilm() {
+    public FilmData[] findLast() {
         int resultLength;
         if (films.length < limit) {
             resultLength = films.length;
